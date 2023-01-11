@@ -16,6 +16,7 @@ public class Part03Browsers
 	
 	//	System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//drivers//chromedriver.exe");
 		
+//new changes made in code this is completly replaced file
 		WebDriverManager.chromedriver().setup();	
 		WebDriver c = new ChromeDriver();
 		Thread.sleep(3000);
