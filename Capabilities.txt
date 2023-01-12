@@ -1,0 +1,16 @@
+WebDriverManager.chromedriver().setup();
+	
+	DesiredCapabilities caps = new DesiredCapabilities();
+
+	ChromeOptions options = new ChromeOptions();
+	Map<String, Object> prefs = new HashMap<String, Object>();
+	Map<String, Object> profile = new HashMap<String, Object>();
+	Map<String, Object> contentSettings = new HashMap<String, Object>();
+
+	contentSettings.put("cookies",2);
+	profile.put("managed_default_content_settings",contentSettings);
+	prefs.put("profile",profile);
+	options.setExperimentalOption("prefs",prefs);
+	caps.setCapability(ChromeOptions.CAPABILITY,options);
+
+	driver = new ChromeDriver(caps);
